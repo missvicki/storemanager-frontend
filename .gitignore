@@ -1,4 +1,20 @@
-node_modules/
+/node_modules
+
+# testing
+/coverage
+
+# production
+/dist
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package-lock.json
+dist
 yarn.lock
-coverage/
-dist/
+yarn-error.log
+.env
+.idea
+.vscode/
+
