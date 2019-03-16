@@ -1,1 +1,3 @@
-# storemanager-frontend
+# Store Manager Application
+
+[![Build Status](https://travis-ci.org/missvicki/storemanager-frontend.svg?branch=develop)](https://travis-ci.org/missvicki/storemanager-frontend) [![Maintainability](https://api.codeclimate.com/v1/badges/a76d83b0acc4b9eac62d/maintainability)](https://codeclimate.com/github/missvicki/storemanager-frontend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a76d83b0acc4b9eac62d/test_coverage)](https://codeclimate.com/github/missvicki/storemanager-frontend/test_coverage)
