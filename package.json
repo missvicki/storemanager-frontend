@@ -7,14 +7,19 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "start": "webpack-dev-server --open --mode development --hot --https",
-    "build": "webpack --mode production --open --hot"
+    "build": "webpack --mode production --open --hot",
+    "test:coverage": " jest --collectCoverage"
   },
   "keywords": [],
   "author": "Victor Nomwesigwa",
   "license": "MIT",
   "jest": {
-    "setupFiles": ["./src/setupTests.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -39,8 +44,11 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "coverage": "^0.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.15.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-test-renderer": "^16.8.4"
