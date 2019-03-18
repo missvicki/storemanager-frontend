@@ -12,7 +12,9 @@
     "start": "webpack-dev-server --open --mode development --hot --https",
     "build": "webpack --mode production --open --hot",
     "heroku-prebuild": "npm install",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "test:coverage": "jest --collectCoverage",
+    "coverage": "jest --collectCoverage"
   },
   "keywords": [],
   "author": "Victor Nomwesigwa",
