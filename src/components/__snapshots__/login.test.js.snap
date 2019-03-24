@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should render the Login Component 1`] = `
+<Login
+  loading={false}
+  loginError=""
+  onChangeHandler={[MockFunction]}
+  onDismissHandler={[MockFunction]}
+  onSubmitHandler={[MockFunction]}
+  password=""
+  user_name=""
+>
+  <div
+    className="loginPage"
+    style={
+      Object {
+        "padding": "10% 0",
+      }
+    }
+  >
+    <Grid
+      columns={2}
+      stackable={true}
+    >
+      <div
+        className="ui stackable two column grid"
+      >
+        <GridColumn
+          width={4}
+        >
+          <div
+            className="four wide column"
+          />
+        </GridColumn>
+        <GridColumn
+          padded="very"
+          width={8}
+        >
+          <div
+            className="eight wide column"
+            padded="very"
+          >
+            <Segment
+              color="teal"
+              padded="very"
+            >
+              <div
+                className="ui teal very padded segment"
+              >
+                <Header
+                  as="h1"
+                  padded="very"
+                  textAlign="center"
+                >
+                  <h1
+                    className="ui center aligned header"
+                    padded="very"
+                  >
+                    Store Manager
+                  </h1>
+                </Header>
+                <Header
+                  as="h6"
+                  style={
+                    Object {
+                      "color": "#008080",
+                      "fontSize": "1em",
+                      "marginTop": "5px",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <h6
+                    className="ui header"
+                    style={
+                      Object {
+                        "color": "#008080",
+                        "fontSize": "1em",
+                        "marginTop": "5px",
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Log in to your account
+                  </h6>
+                </Header>
+                <br />
+                <br />
+                <center>
+                  <Form
+                    as="form"
+                    onSubmit={[MockFunction]}
+                  >
+                    <form
+                      className="ui form"
+                      onSubmit={[Function]}
+                    >
+                      <FormField>
+                        <div
+                          className="field"
+                        >
+                          <input
+                            name="user_name"
+                            onChange={[MockFunction]}
+                            placeholder="Username"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </FormField>
+                      <FormField>
+                        <div
+                          className="field"
+                        >
+                          <input
+                            name="password"
+                            onChange={[MockFunction]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
+                          />
+                        </div>
+                      </FormField>
+                      <FormButton
+                        as={[Function]}
+                        control={[Function]}
+                        loading={false}
+                        style={
+                          Object {
+                            "background": "teal",
+                            "color": "white",
+                          }
+                        }
+                        type="submit"
+                      >
+                        <FormField
+                          control={[Function]}
+                          loading={false}
+                          style={
+                            Object {
+                              "background": "teal",
+                              "color": "white",
+                            }
+                          }
+                          type="submit"
+                        >
+                          <div
+                            className="field"
+                          >
+                            <Button
+                              as="button"
+                              loading={false}
+                              style={
+                                Object {
+                                  "background": "teal",
+                                  "color": "white",
+                                }
+                              }
+                              type="submit"
+                            >
+                              <Ref
+                                innerRef={
+                                  Object {
+                                    "current": <button
+                                      class="ui button"
+                                      style="background: teal; color: white;"
+                                      type="submit"
+                                    >
+                                      Sign in
+                                    </button>,
+                                  }
+                                }
+                              >
+                                <RefFindNode
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui button"
+                                        style="background: teal; color: white;"
+                                        type="submit"
+                                      >
+                                        Sign in
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <button
+                                    className="ui button"
+                                    onClick={[Function]}
+                                    style={
+                                      Object {
+                                        "background": "teal",
+                                        "color": "white",
+                                      }
+                                    }
+                                    type="submit"
+                                  >
+                                    Sign in
+                                  </button>
+                                </RefFindNode>
+                              </Ref>
+                            </Button>
+                          </div>
+                        </FormField>
+                      </FormButton>
+                    </form>
+                  </Form>
+                </center>
+              </div>
+            </Segment>
+          </div>
+        </GridColumn>
+      </div>
+    </Grid>
+  </div>
+</Login>
+`;
