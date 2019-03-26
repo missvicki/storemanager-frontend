@@ -7,7 +7,6 @@ import {productsFetch} from '../actions/productsAction';
 import {usersCreate} from '../actions/createUser';
 import CreateUsers from '../components/CreateUsers';
 import { removeUserError } from "../actions/index";
-import { infoToast } from '../components/Toast';
 
 export class HomeView extends Component {
     constructor(props) {
