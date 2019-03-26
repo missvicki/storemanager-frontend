@@ -5,6 +5,15 @@ exports[`Home View renders homeView component correctly 1`] = `
   <Navigation
     onLogoutClick={[Function]}
   />
+  <CreateUsers
+    loading={false}
+    name=""
+    onChangeHandler={[Function]}
+    onDismissHandler={[Function]}
+    onSubmitHandler={[Function]}
+    userError=""
+    userMessage=""
+  />
   <Products />
 </div>
 `;

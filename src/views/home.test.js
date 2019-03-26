@@ -4,10 +4,18 @@ import { HomeView, mapDispatchToProps, mapStateToProps } from "./Home";
 
 describe('Home View', () => {
     const mockProductsFetch = jest.fn();
+    const mockRemoveUserError = jest.fn();
+    const mockUsersCreate = jest.fn();
     const dispatch = jest.fn();
 
     const productProps = {
-        products: mockProductsFetch
+        products: mockProductsFetch,
+        dismissUserError: mockRemoveUserError,
+        usersCreate: mockUsersCreate,
+        loading: false,
+        userError: "",
+        userMessage: ""
+
     };
 
     const homeView = shallow(<HomeView {...productProps} />);
@@ -32,14 +40,48 @@ describe('Home View', () => {
             expect(window.confirm).toHaveBeenCalled();
         }
     });
+
+    it("onChangeHandler updates name in state", () => {
+        homeViewInstance.onChangeHandler({
+            target: { value: "victoria", name: "name" }
+        });
+        expect(homeView.state().name).toBe("victoria");
+    });
+
+    it("onChangeHandler updates user name in state", () => {
+        homeViewInstance.onChangeHandler({
+            target: { value: "victoria", name: "user_name" }
+        });
+        expect(homeView.state().user_name).toBe("victoria");
+    });
+
+    it("onChangeHandler updates role in state", () => {
+        homeViewInstance.onChangeHandler({
+            target: { value: "admin", name: "role" }
+        });
+        expect(homeView.state().role).toBe("admin");
+    });
+
+    it("onChangeHandler updates password in state when an event with value of password is passed", () => {
+        homeViewInstance.onChangeHandler({
+            target: { value: "okay", name: "password" }
+        });
+        expect(homeView.state().password).toBe("okay");
+    });
+
+    it("onDismissHandler dispatches removeUserError action creator to remove login error message", () => {
+        homeViewInstance.onDismissHandler();
+        expect(mockRemoveUserError).toHaveBeenCalled();
+    });
+
+    it("onSubmitHandler dispatches loginFetch action creator when called", () => {
+        homeViewInstance.onSubmitHandler({ preventDefault: () => null });
+        expect(mockUsersCreate).toHaveBeenCalled();
+    });
     it("should map dispatch to props", () => {
         mapDispatchToProps(dispatch).products();
-        expect(dispatch.mock.calls.length).toBe(1);
+        mapDispatchToProps(dispatch).usersCreate();
+        mapDispatchToProps(dispatch).dismissUserError();
+        expect(dispatch.mock.calls.length).toBe(3);
     });
-
-    it("should map state to props", () => {
-        const products = { product: [] };
-        expect(mapStateToProps({ products })).toEqual({ product: [] });
-    });
-
 });

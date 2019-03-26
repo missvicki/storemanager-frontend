@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { getProducts, productsStarted } from './index';
-import {dangerToast} from '../components/Toast';
+import { getProducts, productsStarted} from './index';
+import { dangerToast } from '../components/Toast';
 
-const productsFetch = payload => {
+export const productsFetch = payload => {
     return dispatch => {
         dispatch(productsStarted());
         return axios.get(payload.url).then(response => {
@@ -12,5 +12,3 @@ const productsFetch = payload => {
         })
     };
 };
-
-export default productsFetch;

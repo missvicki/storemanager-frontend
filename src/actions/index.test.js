@@ -10,7 +10,15 @@ import {
     GET_PRODUCTS,
     GET_PRODUCTS_START,
     productsStarted,
-    getProducts
+    getProducts,
+    createUser,
+    startCreate,
+    failedUser,
+    removeUserError,
+    CREATE_USER,
+    FAILED_USER,
+    CREATE_USER_START,
+    REMOVE_USER_ERROR
 } from "./index";
 
 describe("synchronous login action creators", () => {
@@ -26,7 +34,7 @@ describe("synchronous login action creators", () => {
         expect(loginStarted()).toEqual({ type: LOGIN_STARTED });
     });
 
-    it("should create action to start login", () => {
+    it("should create action to remove error", () => {
         expect(removeLoginError()).toEqual({ type: REMOVE_LOGIN_ERROR });
     });
 
@@ -36,6 +44,22 @@ describe("synchronous login action creators", () => {
 
     it("should create action to start getting products action", () => {
         expect(productsStarted()).toEqual({ type: GET_PRODUCTS_START });
+    });
+
+    it("should create action to create user", () => {
+        expect(createUser({})).toEqual({ type: CREATE_USER, userData: {} });
+    });
+
+    it("should create action to return failed create user", () => {
+        expect(failedUser("am an error")).toEqual({ type: FAILED_USER, errorMsg: "am an error" });
+    });
+
+    it("should create action to start user", () => {
+        expect(startCreate()).toEqual({ type: CREATE_USER_START });
+    });
+
+    it("should create action to remove error", () => {
+        expect(removeUserError()).toEqual({ type: REMOVE_USER_ERROR });
     });
 
 
