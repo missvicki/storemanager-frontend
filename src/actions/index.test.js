@@ -6,7 +6,11 @@ import {
     loginStarted,
     LOGIN_STARTED,
     removeLoginError,
-    REMOVE_LOGIN_ERROR
+    REMOVE_LOGIN_ERROR,
+    GET_PRODUCTS,
+    GET_PRODUCTS_START,
+    productsStarted,
+    getProducts
 } from "./index";
 
 describe("synchronous login action creators", () => {
@@ -24,6 +28,14 @@ describe("synchronous login action creators", () => {
 
     it("should create action to start login", () => {
         expect(removeLoginError()).toEqual({ type: REMOVE_LOGIN_ERROR });
+    });
+
+    it("should create action to get products", () => {
+        expect(getProducts({})).toEqual({ type: GET_PRODUCTS, productsData: {} });
+    });
+
+    it("should create action to start getting products action", () => {
+        expect(productsStarted()).toEqual({ type: GET_PRODUCTS_START });
     });
 
 
