@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create Users should render the Create User Component 1`] = `
+<CreateUsers
+  loading={false}
+  name=""
+  onChangeHandler={[MockFunction]}
+  onDismissHandler={[MockFunction]}
+  onSubmitHandler={[MockFunction]}
+  password=""
+  role=""
+  userError=""
+  userMessage=""
+  user_name=""
+>
+  <div>
+    <Container
+      textAlign="right"
+    >
+      <div
+        className="ui right aligned container"
+      >
+        <br />
+        <Modal
+          centered={true}
+          closeOnDimmerClick={true}
+          closeOnDocumentClick={false}
+          dimmer={true}
+          eventPool="Modal"
+          trigger={
+            <Button
+              as="button"
+              basic={true}
+              color="teal"
+            >
+              Create Users
+            </Button>
+          }
+        >
+          <Portal
+            closeOnDocumentClick={false}
+            closeOnEscape={true}
+            eventPool="Modal"
+            mountNode={<body />}
+            onClose={[Function]}
+            onMount={[Function]}
+            onOpen={[Function]}
+            onUnmount={[Function]}
+            openOnTriggerClick={true}
+            trigger={
+              <Button
+                as="button"
+                basic={true}
+                color="teal"
+              >
+                Create Users
+              </Button>
+            }
+          >
+            <Ref
+              innerRef={[Function]}
+            >
+              <RefFindNode
+                innerRef={[Function]}
+              >
+                <Button
+                  as="button"
+                  basic={true}
+                  color="teal"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                >
+                  <Ref
+                    innerRef={
+                      Object {
+                        "current": <button
+                          class="ui teal basic button"
+                        >
+                          Create Users
+                        </button>,
+                      }
+                    }
+                  >
+                    <RefFindNode
+                      innerRef={
+                        Object {
+                          "current": <button
+                            class="ui teal basic button"
+                          >
+                            Create Users
+                          </button>,
+                        }
+                      }
+                    >
+                      <button
+                        className="ui teal basic button"
+                        onBlur={[Function]}
+                        onClick={[Function]}
+                        onFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                      >
+                        Create Users
+                      </button>
+                    </RefFindNode>
+                  </Ref>
+                </Button>
+              </RefFindNode>
+            </Ref>
+          </Portal>
+        </Modal>
+      </div>
+    </Container>
+  </div>
+</CreateUsers>
+`;
