@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import testReducer from './testReducer';
 import loginReducer from "./login";
+import productReducer from "./productsReducer";
 
 const reducerParts = {
   testReducer,
-  login: loginReducer
+  login: loginReducer,
+  products: productReducer
 }
 
 // we combine the individual parts

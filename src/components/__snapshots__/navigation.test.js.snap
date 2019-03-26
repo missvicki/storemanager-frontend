@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation should render the Navigation Component 1`] = `
+<div>
+  <Menu
+    secondary={true}
+    style={
+      Object {
+        "background": "teal",
+      }
+    }
+  >
+    <MenuItem
+      header={true}
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      <NavLink
+        to="/"
+      >
+        <Header
+          as="h1"
+          padded="very"
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          textAlign="center"
+        >
+          Store Manager
+        </Header>
+      </NavLink>
+    </MenuItem>
+    <MenuMenu
+      position="right"
+      style={
+        Object {
+          "margin": "0 auto",
+        }
+      }
+    >
+      <MenuItem
+        name="logout"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+            "textSize": "3em",
+          }
+        }
+      />
+    </MenuMenu>
+  </Menu>
+</div>
+`;

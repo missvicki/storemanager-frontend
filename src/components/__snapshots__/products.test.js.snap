@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products should render the Product Component 1`] = `
+<div>
+  <Container>
+    <br />
+    <Header
+      as="h1"
+      padded="very"
+      style={
+        Object {
+          "color": "gray",
+        }
+      }
+      textAlign="center"
+    >
+      Products
+    </Header>
+    <Table
+      as="table"
+      unstackable={true}
+    >
+      <TableHeader
+        as="thead"
+      >
+        <TableHeaderCell
+          as="th"
+        >
+          Product Name
+        </TableHeaderCell>
+        <TableHeaderCell
+          as="th"
+        >
+          Category
+        </TableHeaderCell>
+        <TableHeaderCell
+          as="th"
+        >
+          Unit Price
+        </TableHeaderCell>
+        <TableHeaderCell
+          as="th"
+        >
+          Quantity
+        </TableHeaderCell>
+      </TableHeader>
+      <TableBody
+        as="tbody"
+      />
+    </Table>
+  </Container>
+</div>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home View renders homeView component correctly 1`] = `
+<div>
+  <Navigation
+    onLogoutClick={[Function]}
+  />
+  <Products />
+</div>
+`;
