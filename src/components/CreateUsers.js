@@ -13,7 +13,8 @@ const CreateUsers = (props) => {
         onDismissHandler,
         loading,
         userError,
-        userMessage
+        userMessage,
+        handleChange
     } = props
 
     const userErorMsg = (
@@ -29,13 +30,25 @@ const CreateUsers = (props) => {
 
     const userMsg = (
         <Message
-            success
             positive
+            success
             content={userMessage}
+            onDismiss={onDismissHandler}
             header='Success!!!'
             style={{ width: "50%", margin: "auto", color: "green" }}
         />
     );
+
+    const roles = [{
+        key: 1,
+        text: "admin",
+        value: "amin",
+    }, {
+        key: 2,
+        text: "attendant",
+        value: "attendant",
+    },]
+
 
     return (
         <div>
@@ -67,15 +80,12 @@ const CreateUsers = (props) => {
                                         onChange={onChangeHandler}
                                     />
                                 </Form.Field>
-                                <Form.Field>
-                                    <input
-                                        type="text"
-                                        placeholder="Role for example: admin or attendant"
-                                        name="role"
-                                        value={role}
-                                        onChange={onChangeHandler}
-                                    />
-                                </Form.Field>
+                                <Form.Select
+                                    placeholder='Select roles'
+                                    options={roles}
+                                    name="role"
+                                    onChange={handleChange}
+                                />
                                 <Form.Field>
                                     <input
                                         type="password"
