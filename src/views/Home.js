@@ -3,8 +3,8 @@ import { connect, } from "react-redux";
 
 import Products from '../components/Products';
 import Navigation from '../components/Navigation';
-import {productsFetch} from '../actions/productsAction';
-import {usersCreate} from '../actions/createUser';
+import { productsFetch } from '../actions/productsAction';
+import { usersCreate } from '../actions/createUser';
 import CreateUsers from '../components/CreateUsers';
 import { removeUserError } from "../actions/index";
 
@@ -14,7 +14,7 @@ export class HomeView extends Component {
         this.state = {
             user_name: "",
             name: "",
-            role: "",
+            selected: "",
             password: ""
         };
     }
@@ -40,8 +40,8 @@ export class HomeView extends Component {
 
     onSubmitHandler = e => {
         e.preventDefault();
-        const { name, user_name, password, role } = this.state;
-        const data = { name, user_name, password, role  };
+        const { name, user_name, password, selected } = this.state;
+        const data = { name, user_name, password, role: { selected } };
         const url =
             "https://store-manager-ap1.herokuapp.com/api/v2/auth/signup";
         const payload = {
@@ -49,7 +49,7 @@ export class HomeView extends Component {
             history: this.props.history,
             url
         };
-        this.props.usersCreate(payload); 
+        this.props.usersCreate(payload);
     };
 
     onDismissHandler = () => {
@@ -60,6 +60,7 @@ export class HomeView extends Component {
     };
 
     onChangeHandler = e => this.setState({ [e.target.name]: e.target.value });
+    handleChange = e => this.setState({ [e.target.name]: e.target.option});
 
     render() {
         const productProps = {

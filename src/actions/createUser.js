@@ -13,17 +13,17 @@ export const usersCreate = payload => {
         dispatch(startCreate());
         return axios.post(payload.url, payload.data, { headers: headers }).then(response => {
             dispatch(createUser(response.data.Success));
+            payload.history.push("/products");
         }).catch(error => {
-            console.log(error.response)
-            if(error.response.status === 401){
+            if (error.response.status === 401) {
                 const errorMsg = error.response.data.msg
                 dispatch(failedUser(errorMsg));
             }
-            if(error.response.status === 400){
+            if (error.response.status === 400) {
                 const errorMsg = error.response.data.error
                 dispatch(failedUser(errorMsg));
             }
-            
+
         })
     };
 };

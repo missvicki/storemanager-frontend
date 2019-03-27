@@ -10,8 +10,8 @@ This application is meant for use in a single store.
 
 #### Features implemented
 - Login which can be accessed as the default route
-- List products in the store found on the `/home`.
-- Adding of new users accessed on the `/home` route.
+- List products in the store found on the `/products`.
+- Adding of new users accessed on the `/products` route.
 
 #### Technologies used
 - React JS used to do UI on frontend.
