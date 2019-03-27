@@ -6,13 +6,16 @@ exports[`Home View renders homeView component correctly 1`] = `
     onLogoutClick={[Function]}
   />
   <CreateUsers
+    handleChange={[Function]}
     loading={false}
     name=""
     onChangeHandler={[Function]}
     onDismissHandler={[Function]}
     onSubmitHandler={[Function]}
+    password=""
     userError=""
     userMessage=""
+    user_name=""
   />
   <Products />
 </div>
