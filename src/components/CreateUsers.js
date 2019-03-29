@@ -6,7 +6,6 @@ const CreateUsers = (props) => {
     const {
         name,
         user_name,
-        role,
         password,
         onSubmitHandler,
         onChangeHandler,
@@ -39,16 +38,15 @@ const CreateUsers = (props) => {
         />
     );
 
-    const roles = [{
+    const options = [{
         key: 1,
         text: "admin",
-        value: "amin",
+        value: "admin"
     }, {
         key: 2,
         text: "attendant",
-        value: "attendant",
-    },]
-
+        value: "attendant"
+    }]
 
     return (
         <div>
@@ -80,11 +78,11 @@ const CreateUsers = (props) => {
                                         onChange={onChangeHandler}
                                     />
                                 </Form.Field>
-                                <Form.Select
-                                    placeholder='Select roles'
-                                    options={roles}
-                                    name="role"
+                                <Form.Dropdown
+                                    placeholder="Select Role"
                                     onChange={handleChange}
+                                    fluid selection
+                                    options={options}
                                 />
                                 <Form.Field>
                                     <input

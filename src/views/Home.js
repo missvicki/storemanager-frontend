@@ -40,8 +40,8 @@ export class HomeView extends Component {
 
     onSubmitHandler = e => {
         e.preventDefault();
-        const { name, user_name, password, selected } = this.state;
-        const data = { name, user_name, password, role: { selected } };
+        const { name, user_name, password, role } = this.state;
+        const data = { name, user_name, password, role };
         const url =
             "https://store-manager-ap1.herokuapp.com/api/v2/auth/signup";
         const payload = {
@@ -60,7 +60,9 @@ export class HomeView extends Component {
     };
 
     onChangeHandler = e => this.setState({ [e.target.name]: e.target.value });
-    handleChange = e => this.setState({ [e.target.name]: e.target.option});
+    handleChange = (e, { value }) => {
+        this.setState({ role: value})
+    };
 
     render() {
         const productProps = {
@@ -68,12 +70,13 @@ export class HomeView extends Component {
         }
         const createProps = {
             name: this.state.name,
-            user_name: this.state.product_name,
-            role: this.state.category,
-            password: this.state.unit_price,
+            user_name: this.state.user_name,
+            role: this.state.role,
+            password: this.state.password,
             onSubmitHandler: this.onSubmitHandler,
             onChangeHandler: this.onChangeHandler,
             onDismissHandler: this.onDismissHandler,
+            handleChange: this.handleChange,
             loading: this.props.loading,
             userError: this.props.userError,
             userMessage: this.props.userMessage

@@ -37,6 +37,7 @@ const createUsersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userError: "",
+                userMessage: "",
                 loading: false
             };
         default:
